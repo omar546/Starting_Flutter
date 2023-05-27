@@ -9,6 +9,7 @@ class MessengerScreen extends StatelessWidget
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
       backgroundColor: Colors.white,
         elevation: 0.0,
         titleSpacing: 20.0,
