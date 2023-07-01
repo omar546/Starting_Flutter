@@ -1,73 +1,106 @@
 import 'package:flutter/material.dart';
 
-class UserModel
-{
+class UserModel {
   final int id;
   final String name;
   final String phone;
+
   UserModel({
     required this.id,
     required this.phone,
     required this.name,
-});
+  });
 }
 
-class UserScreen extends StatelessWidget
-{
+class UsersScreen extends StatelessWidget {
   List<UserModel> users = [
     UserModel(
       id: 1,
-      name: 'Omar Mekkawy',
-      phone: '323232323'
+      name: 'Abdullah Mansour',
+      phone: '+201115342559',
     ),
     UserModel(
-        id: 2,
-        name: 'Karim Radwan',
-        phone: '8787654356'
+      id: 2,
+      name: 'Osama Mansour',
+      phone: '+201117842559',
     ),
     UserModel(
-        id: 3,
-        name: 'Abdullah Elsayed',
-        phone: '9876543214'
+      id: 3,
+      name: 'Ahmed Ali',
+      phone: '+2087856136',
     ),
     UserModel(
-        id: 4,
-        name: 'Ahmed Hosney',
-        phone: '327676323'
+      id: 1,
+      name: 'Abdullah Mansour',
+      phone: '+201115342559',
     ),
     UserModel(
-        id: 5,
-        name: 'Ahmed Abdelsalam',
-        phone: '8709876556'
+      id: 2,
+      name: 'Osama Mansour',
+      phone: '+201117842559',
     ),
     UserModel(
-        id: 6,
-        name: 'omar alaa',
-        phone: '9865983214'
+      id: 3,
+      name: 'Ahmed Ali',
+      phone: '+2087856136',
+    ),
+    UserModel(
+      id: 1,
+      name: 'Abdullah Mansour',
+      phone: '+201115342559',
+    ),
+    UserModel(
+      id: 2,
+      name: 'Osama Mansour',
+      phone: '+201117842559',
+    ),
+    UserModel(
+      id: 3,
+      name: 'Ahmed Ali',
+      phone: '+2087856136',
+    ),
+    UserModel(
+      id: 1,
+      name: 'Abdullah Mansour',
+      phone: '+201115342559',
+    ),
+    UserModel(
+      id: 2,
+      name: 'Osama Mansour',
+      phone: '+201117842559',
+    ),
+    UserModel(
+      id: 3,
+      name: 'Ahmed Ali',
+      phone: '+2087856136',
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text(
           'Users',
         ),
       ),
       body: ListView.separated(
-          itemBuilder: (context,index) => buildUserItem(users[index]),
-          separatorBuilder: (context,index) => Padding(
-            padding: const EdgeInsetsDirectional.only(
-                start: 20.0),
-            child: Container(
-              width: double.infinity,
-              height: 1.0,
-              color: Colors.grey[300],
-            ),
+        itemBuilder: (context, index) => buildUserItem(users[index]),
+        separatorBuilder: (context, index) => Padding(
+          padding: const EdgeInsetsDirectional.only(
+            start: 20.0,
           ),
-          itemCount: users.length),
+          child: Container(
+            width: double.infinity,
+            height: 1.0,
+            color: Colors.grey[300],
+          ),
+        ),
+        itemCount: users.length,
+      ),
     );
   }
+
   Widget buildUserItem(UserModel user) => Padding(
     padding: const EdgeInsets.all(20.0),
     child: Row(
@@ -107,4 +140,8 @@ class UserScreen extends StatelessWidget
       ],
     ),
   );
+
+// 1. build item
+// 2. build list
+// 3. add item to list
 }
