@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_rep/users_screen.dart';
 
 class MessengerScreen extends StatelessWidget
 {
@@ -64,7 +65,10 @@ class MessengerScreen extends StatelessWidget
             ),
           ),
           IconButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator. push(context, MaterialPageRoute(builder: (BuildContext context){ return UsersScreen(); }));
+
+            },
             icon: CircleAvatar(
               radius: 15.0,
               backgroundColor: Colors.grey[300]
@@ -117,7 +121,7 @@ class MessengerScreen extends StatelessWidget
                 child: ListView.separated(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context,index) => buildStoryItem(),
+                  itemBuilder: (context,index) => BuildStoryItem(),
                   separatorBuilder: (context,index) => SizedBox(
                     width: 20.0,
                   ),
@@ -130,7 +134,7 @@ class MessengerScreen extends StatelessWidget
               ListView.separated(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                  itemBuilder: (context,index) => buildChatItem(),
+                  itemBuilder: (context,index) => BuildChatItem(),
                   separatorBuilder: (context,index) => SizedBox(
                     height: 20.0,
                   ),
@@ -144,7 +148,7 @@ class MessengerScreen extends StatelessWidget
   }
   //Build Item
   //arron fun "one obj return + no other operations"
-  Widget buildStoryItem() => Container(
+  Widget BuildStoryItem() => Container(
     width: 60.0,
     child: Column(
       children: [
@@ -184,7 +188,7 @@ class MessengerScreen extends StatelessWidget
       ],
     ),
   );
-  Widget buildChatItem() => Row(
+  Widget BuildChatItem() => Row(
     children: [
       Stack(
         alignment: AlignmentDirectional.bottomEnd,
@@ -264,3 +268,4 @@ class MessengerScreen extends StatelessWidget
     ],
   );
 }
+    
