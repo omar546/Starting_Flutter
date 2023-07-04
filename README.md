@@ -3,7 +3,8 @@ this is my first Flutter design
 ## kind of a replicate of the Facebook messenger app
 <br> 
 <br> 
-you can try it by downloading it from [HERE](https://www.mediafire.com/file/ajny9ikmz22vo1w/Messenger_replicate.apk/file)
+you can try it by downloading it from <a href="https://www.mediafire.com/file/ajny9ikmz22vo1w/Messenger_replicate.apk/file">HERE</a>
+
 
 
 <br> 
