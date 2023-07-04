@@ -82,7 +82,7 @@ class UsersScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Colors.grey[600],
         title: Text(
-          'Users',
+          'Contacts',
         ),
       ),
       body: ListView.separated(
