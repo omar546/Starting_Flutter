@@ -80,9 +80,10 @@ class UsersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:  Colors.grey[600],
+        backgroundColor:  Colors.grey[400],
         title: Text(
           'Contacts',
+          style: TextStyle(color: Colors.black),
         ),
       ),
       body: ListView.separated(
