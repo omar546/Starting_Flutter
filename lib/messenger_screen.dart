@@ -184,6 +184,7 @@ class MessengerScreen extends StatelessWidget
           'Omar Mekkawy Mahmoud',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.center,
         ),
       ],
     ),
