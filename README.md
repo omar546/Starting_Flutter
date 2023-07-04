@@ -2,11 +2,11 @@
 this is my first Flutter design 
 ## kind of a replicate of the Facebook messenger app
 ### 🎥
-<br> 
+<be> 
 
 
 
 
-![WhatsApp Video 2023-07-04 at 05 36 45](https://github.com/omar546/Starting_Flutter/assets/71936776/38be745d-a653-4e9f-ad7e-e8d30d47645f)
 
 
+![WhatsApp Video 2023-07-04 at 05 45 17](https://github.com/omar546/Starting_Flutter/assets/71936776/e8c89bc6-14db-4e80-b092-af9859bfa72a)
