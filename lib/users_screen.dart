@@ -31,47 +31,47 @@ class UsersScreen extends StatelessWidget {
     ),
     UserModel(
       id: 4,
-      name: 'Abdullah Mansour',
+      name: 'Mansour Abdullah',
       phone: '+201115342559',
     ),
     UserModel(
       id: 5,
-      name: 'Osama Mansour',
+      name: 'Mansour Osama',
       phone: '+201117842559',
     ),
     UserModel(
       id: 6,
-      name: 'Ahmed Ali',
+      name: 'Ali Ahmed',
       phone: '+2087856136',
     ),
     UserModel(
       id: 7,
-      name: 'Abdullah Mansour',
+      name: 'Abdullah Osama',
       phone: '+201115342559',
     ),
     UserModel(
       id: 8,
-      name: 'Osama Mansour',
+      name: 'Osama Abdullah',
       phone: '+201117842559',
     ),
     UserModel(
       id: 9,
-      name: 'Ahmed Ali',
+      name: 'Mansour Ali',
       phone: '+2087856136',
     ),
     UserModel(
       id: 10,
-      name: 'Abdullah Mansour',
+      name: 'Abdullah Ahmed',
       phone: '+201115342559',
     ),
     UserModel(
       id: 11,
-      name: 'Osama Mansour',
+      name: 'Omar Mansour',
       phone: '+201117842559',
     ),
     UserModel(
       id: 12,
-      name: 'Ahmed Ali',
+      name: 'Ahmed ibrahim',
       phone: '+2087856136',
     ),
   ];
@@ -80,24 +80,50 @@ class UsersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:  Colors.grey[400],
-        title: Text(
-          'Contacts',
-          style: TextStyle(color: Colors.black),
+
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        titleSpacing: 20.0,
+        leadingWidth: 0.0,
+        title: Row(
+          children: [
+            IconButton(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: CircleAvatar(
+                radius: 15.0,
+                backgroundColor: Colors.grey[300]
+                ,
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 16.0,
+
+                ),
+              ),
+            ),
+            Text(
+              'Contacts',
+              style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black
+              ),
+            ),
+          ],
         ),
       ),
-      body: ListView.separated(
+      body: ListView.builder(
         itemBuilder: (context, index) => buildUserItem(users[index]),
-        separatorBuilder: (context, index) => Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: 20.0,
-          ),
-          child: Container(
-            width: double.infinity,
-            height: 1.0,
-            color: Colors.grey[300],
-          ),
-        ),
+        // separatorBuilder: (context, index) => Padding(
+        //   padding: const EdgeInsetsDirectional.only(
+        //     start: 20.0,
+        //   ),
+        //   // child: Container(
+        //   //   width: double.infinity,
+        //   //   height: 1.0,
+        //   //   color: Colors.grey[300],
+        //   // ),
+        // ),
         itemCount: users.length,
       ),
     );
@@ -109,11 +135,11 @@ class UsersScreen extends StatelessWidget {
       children: [
         CircleAvatar(
           backgroundColor:  Colors.grey[300],
-          radius: 25.0,
+          radius: 30.0,
           child: Text(
             '${user.id}',
             style: TextStyle(
-              fontSize: 25.0,
+              fontSize: 20.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
@@ -129,7 +155,7 @@ class UsersScreen extends StatelessWidget {
             Text(
               '${user.name}',
               style: TextStyle(
-                fontSize: 25.0,
+                fontSize: 16.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
