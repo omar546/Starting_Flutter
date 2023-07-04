@@ -80,6 +80,7 @@ class UsersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor:  Colors.grey[600],
         title: Text(
           'Users',
         ),
@@ -106,11 +107,13 @@ class UsersScreen extends StatelessWidget {
     child: Row(
       children: [
         CircleAvatar(
+          backgroundColor:  Colors.grey[300],
           radius: 25.0,
           child: Text(
             '${user.id}',
             style: TextStyle(
               fontSize: 25.0,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
           ),
