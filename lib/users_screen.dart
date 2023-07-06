@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'counter_screen.dart';
+
 class UserModel {
   final int id;
   final String name;
@@ -111,6 +113,23 @@ class UsersScreen extends StatelessWidget {
             ),
           ],
         ),
+      actions: [IconButton(
+        onPressed: (){
+          Navigator. push(context, MaterialPageRoute(builder: (BuildContext context){ return CounterScreen(); }));
+    }
+        ,
+        icon: CircleAvatar(
+          radius: 15.0,
+          backgroundColor: Colors.grey[300]
+          ,
+          child: Icon(
+            Icons.plus_one_rounded,
+            color: Colors.black,
+            size: 16.0,
+
+          ),
+        ),
+      ),],
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => buildUserItem(users[index]),
