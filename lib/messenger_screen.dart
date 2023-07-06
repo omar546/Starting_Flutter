@@ -121,7 +121,7 @@ class MessengerScreen extends StatelessWidget
                 child: ListView.separated(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context,index) => BuildStoryItem(),
+                  itemBuilder: (context,index) => buildStoryItem(),
                   separatorBuilder: (context,index) => SizedBox(
                     width: 20.0,
                   ),
@@ -134,7 +134,7 @@ class MessengerScreen extends StatelessWidget
               ListView.separated(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                  itemBuilder: (context,index) => BuildChatItem(),
+                  itemBuilder: (context,index) => buildChatItem(),
                   separatorBuilder: (context,index) => SizedBox(
                     height: 20.0,
                   ),
@@ -148,7 +148,7 @@ class MessengerScreen extends StatelessWidget
   }
   //Build Item
   //arron fun "one obj return + no other operations"
-  Widget BuildStoryItem() => Container(
+  Widget buildStoryItem() => Container(
     width: 60.0,
     child: Column(
       children: [
@@ -189,7 +189,7 @@ class MessengerScreen extends StatelessWidget
       ],
     ),
   );
-  Widget BuildChatItem() => Row(
+  Widget buildChatItem() => Row(
     children: [
       Stack(
         alignment: AlignmentDirectional.bottomEnd,
