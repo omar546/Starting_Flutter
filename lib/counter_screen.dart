@@ -82,7 +82,7 @@ class _CounterScreenState extends State<CounterScreen> {
                 backgroundColor: Colors.grey[300]
                 ,
                 child: Icon(
-                  Icons.exposure_minus_1_sharp,
+                  Icons.remove,
                   color: Colors.black,
                   size: 16.0,
 
@@ -130,7 +130,7 @@ class _CounterScreenState extends State<CounterScreen> {
                     backgroundColor: Colors.grey[300]
                     ,
                     child: Icon(
-                      Icons.plus_one_sharp,
+                      Icons.add,
                       color: Colors.black,
                       size: 16.0,
 
