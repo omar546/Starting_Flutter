@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_rep/login_screen.dart';
-import 'package:messenger_rep/users_screen.dart';
 
 void main() {
   runApp(const MyApp());
