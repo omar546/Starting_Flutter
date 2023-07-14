@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_rep/messenger_screen.dart';
 
-class LoginScreen extends StatelessWidget
+class LoginScreen extends StatefulWidget
 {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
+
   var passwordController = TextEditingController();
+
   var formKey = GlobalKey<FormState>();
+
+  bool isPassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +100,7 @@ class LoginScreen extends StatelessWidget
                   TextFormField(
                     controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
-                    obscureText: true,
+                    obscureText: isPassword,
                     onFieldSubmitted: (String value)
                     {
                       print(value);
@@ -113,8 +123,12 @@ class LoginScreen extends StatelessWidget
                       prefixIcon: Icon(
                         Icons.lock,
                       ),
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye,
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          isPassword ? Icons.visibility_off : Icons.visibility
+                        ), onPressed: () { setState(() {
+                          isPassword = !isPassword;
+                        }); },
                       ),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25.0),
