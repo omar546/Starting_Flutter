@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'counter_screen.dart';
+import 'counter/counter_screen.dart';
+
 
 class UserModel {
   final int id;
